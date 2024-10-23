@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hangman Game</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5 shadow-sm">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mb-4">Hangman Game</h1>
+
+                        {% if message %}
+                            <p class="text-center fs-5 text-info">{{ message }}</p>
+                        {% endif %}
+
+                        <form method="POST" class="text-center">
+                            <div class="mb-3">
+                                <label for="letter" class="form-label fs-5">Enter a letter:</label>
+                                <input type="text" name="letter" class="form-control w-50 mx-auto" maxlength="1" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
